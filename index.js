@@ -209,6 +209,10 @@ JAN PELIT PELIT AMA ILMU!!!!
         const mentions = (teks, memberr, id) => {
             (id == null || id == undefined || id == false) ? hexa.sendMessage(from, teks.trim(), extendedText, { contextInfo: { "mentionedJid": memberr } }) : hexa.sendMessage(from, teks.trim(), extendedText, { quoted: Anjay, contextInfo: { "mentionedJid": memberr } })
         }
+
+const fakethumb = (teks, yes) => {
+            hexa.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./stik/fake.jpeg'),quoted:Anjay,caption:yes})
+        }
         
         const sendStickerFromUrl = async(to, url) => {
                 var names = Date.now() / 10000;
